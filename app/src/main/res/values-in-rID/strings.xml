@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Anvie</string>
+    <string name="add_to_cart">Masukkan keranjang</string>
+    <string name="title_my_movie">Film Saya</string>
+    <string name="Homepage">Halaman Utama</string>
+    <string name="title_Homepage">Halaman Utama</string>
+    <string name="available">Tersedia</string>
+    <string name="out_of_stock">Habis</string>
+    <string name="description">Deskripsi</string>
+    <string name="checkout">Beli</string>
+    <string name="total_price_26">Total harga : $ 26</string>
+    <string name="find_your_movie">Temukan Filmmu!</string>
+    <string name="qty">Jumlah</string>
+    <string name="see_my_movie">Lihat Film Saya</string>
+    <string name="product_detail">Detail Produk</string>
+    <string name="cart">Keranjang Belanja</string>
+    <string name="order">Pesanan</string>
+    <string name="my_movie">Film Saya</string>
+    <string name="thanks_for_your_order">Terima kasih telah berbelanja.</string>
+</resources>

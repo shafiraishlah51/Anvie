@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Anvie</string>
+    <string name="title_Homepage">Homepage</string>
+    <string name="title_my_movie">My Movie</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="available">Available</string>
+    <string name="out_of_stock">Out of Stock</string>
+    <string name="Homepage">Homepage</string>
+    <string name="description">Description</string>
+    <string name="checkout">Checkout</string>
+    <string name="total_price_26">Total price : $ 26</string>
+    <string name="find_your_movie">Find your Movie!</string>
+    <string name="qty">Qty</string>
+    <string name="see_my_movie">See My Movie</string>
+    <string name="product_detail">Product Detail</string>
+    <string name="cart">Cart</string>
+    <string name="order">Order</string>
+    <string name="my_movie">My Movie</string>
+    <string name="thanks_for_your_order">Thanks for your order.</string>
+</resources>
