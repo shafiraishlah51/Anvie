@@ -7,15 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.Navigation;
-
 import java.util.Locale;
 
 import id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.R;
-import id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.viewmodels.ShopViewModel;
 
 public class SeeTrailerActivity extends Activity {
     private static final long START_TIME_IN_MILLIS = 600000;
@@ -29,7 +23,7 @@ public class SeeTrailerActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_see_trailer);
+        setContentView(R.layout.activity_see_trailer);
         mTextViewCountDown = findViewById(R.id.text_view_countdown);
         mButtonStartPause = findViewById(R.id.button_start_pause);
         mButtonReset = findViewById(R.id.button_reset);
@@ -88,6 +82,7 @@ public class SeeTrailerActivity extends Activity {
         String timeLeftFormatted = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
         mTextViewCountDown.setText(timeLeftFormatted);
     }
+
 
 
 }

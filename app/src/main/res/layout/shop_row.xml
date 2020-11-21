@@ -27,7 +27,7 @@
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/iphone11"
+            app:srcCompat="@drawable/aladdin"
             android:productImage="@{product.imageUrl}"
             />
 

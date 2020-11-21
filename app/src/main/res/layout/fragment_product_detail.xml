@@ -29,7 +29,7 @@
                 android:layout_height="300dp"
                 android:layout_gravity="center"
                 android:scaleType="fitCenter"
-                android:src="@drawable/iphone11"
+                android:src="@drawable/aladdin"
                 android:productImage="@{shopViewModel.product.imageUrl}"
                 />
 

@@ -59,6 +59,6 @@
         android:id="@+id/seeTrailerFragment"
         android:name="id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.views.SeeTrailerFragment"
         android:label="@string/see_trailer"
-        tools:layout="@layout/fragment_see_trailer" >
+        tools:layout="@layout/activity_see_trailer" >
     </fragment>
 </navigation>
