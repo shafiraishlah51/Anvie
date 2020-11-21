@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
@@ -11,6 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <receiver
+            android:name="id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.views.MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"></action>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGE"></action>
+            </intent-filter>
+        </receiver>
+
         <activity
             android:name="id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.views.MainActivity">
             <intent-filter>

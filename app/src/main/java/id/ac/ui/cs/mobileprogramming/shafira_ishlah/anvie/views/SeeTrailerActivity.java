@@ -89,5 +89,5 @@ public class SeeTrailerActivity extends Activity {
         mTextViewCountDown.setText(timeLeftFormatted);
     }
 
-    
+
 }
