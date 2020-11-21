@@ -29,70 +29,63 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <EditText
-            android:id="@+id/edtNamaReview"
+            android:id="@+id/edtMovieName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
-            android:hint="Nama Siswa" />
+            android:hint="@string/movie_name" />
 
         <EditText
-            android:id="@+id/edtUmur"
+            android:id="@+id/edtRatingScore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
-            android:hint="Umur siswa"
+            android:hint="@string/ratingscore"
             android:inputType="number" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Jenis Kelamin :" />
+            android:text="@string/recommended_movie" />
 
         <RadioGroup
-            android:id="@+id/radio_jenis_kelamin"
+            android:id="@+id/radio_recommended_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/radio_laki"
+                android:id="@+id/radio_recommended"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Laki-laki" />
+                android:text="@string/recommended" />
 
             <RadioButton
-                android:id="@+id/radio_perempuan"
+                android:id="@+id/radio_not_recommended"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Perempuan" />
+                android:text="@string/not_recommended" />
 
         </RadioGroup>
 
         <EditText
-            android:id="@+id/edtAsal"
+            android:id="@+id/edtComment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
-            android:hint="Asal siswa"
+            android:hint="@string/comment"
             android:lines="2"
-            android:maxLines="3" />
-
-        <EditText
-            android:id="@+id/edtEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email siswa"
-            android:inputType="textEmailAddress" />
+            android:maxLines="5" />
 
         <Button
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
-            android:text="Simpan"
+            android:text="@string/save"
             android:textColor="@android:color/white" />
 
     </LinearLayout>

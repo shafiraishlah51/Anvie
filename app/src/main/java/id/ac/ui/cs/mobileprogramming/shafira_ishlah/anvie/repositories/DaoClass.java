@@ -31,7 +31,7 @@ public interface DaoClass {
     void update(CategoryReview categoryReview);
 
     // Mengambil data siswa
-    @Query("SELECT * FROM TB_REVIEW WHERE id_category_review = :id_category_review ORDER BY nama_review ASC")
+    @Query("SELECT * FROM TB_REVIEW WHERE id_category_review = :id_category_review ORDER BY movie_name ASC")
     List<Reviews> selectReview(int id_category_review);
 
     // Memasukkan data siswa

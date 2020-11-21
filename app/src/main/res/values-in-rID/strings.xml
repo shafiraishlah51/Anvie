@@ -18,8 +18,16 @@
     <string name="order">Pesanan</string>
     <string name="my_movie">Film Saya</string>
     <string name="thanks_for_your_order">Terima kasih telah berbelanja.</string>
-    <string name="categoryReview">Tambah Penilaian</string>
-    <string name="add_review">Add Review</string>
-    <string name="play">Play</string>
-    <string name="see_trailer">See Trailer</string>
+    <string name="review">Penilaian</string>
+    <string name="add_review">Tambah Penilaian</string>
+    <string name="play">Mulai</string>
+    <string name="see_trailer">Lihat Trailer</string>
+    <string name="movie_name">Nama Film</string>
+    <string name="ratingscore">Skor Penilaian</string>
+    <string name="recommended_movie">Merekomendasikan Film:</string>
+    <string name="recommended">Merekomendasikan</string>
+    <string name="not_recommended">Tidak Merekomendasikan</string>
+    <string name="comment">Komentar</string>
+    <string name="save">Simpan</string>
+    <string name="movie_category">Kategori Film</string>
 </resources>

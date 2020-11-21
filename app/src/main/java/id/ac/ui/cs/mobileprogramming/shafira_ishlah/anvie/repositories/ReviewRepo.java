@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase;
 import id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.models.CategoryReview;
 import id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.models.Reviews;
 
-@Database(entities = {CategoryReview.class, Reviews.class}, version = 2)
+@Database(entities = {CategoryReview.class, Reviews.class}, version = 3)
 public abstract class ReviewRepo extends RoomDatabase {
 
     public abstract DaoClass daoClass();

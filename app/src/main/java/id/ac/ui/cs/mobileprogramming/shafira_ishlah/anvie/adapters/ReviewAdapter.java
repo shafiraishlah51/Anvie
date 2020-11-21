@@ -50,10 +50,10 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
         final Reviews reviews = reviewList.get(position);
 
         // Menampilkan data ke layar
-        holder.txtNameReview.setText(reviews.getNama_review());
+        holder.txtNameReview.setText(reviews.getMovie_name());
 
         // Mengambil huruf pertama
-        String nama = reviews.getNama_review();
+        String nama = reviews.getMovie_name();
         if (!nama.isEmpty()) {
             firstName = nama.substring(0, 1);
         } else {
@@ -76,7 +76,7 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
                 reviewRepo = reviewRepo.createDatabase(context);
 
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
-                alertDialogBuilder.setMessage("Are you sure delete " + reviews.getNama_review() + " ?");
+                alertDialogBuilder.setMessage("Are you sure delete " + reviews.getMovie_name() + " ?");
                 alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {

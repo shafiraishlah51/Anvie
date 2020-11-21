@@ -17,20 +17,17 @@ public class Reviews {
     @ColumnInfo(name = Constant.id_category_review)
     private int id_category_review;
 
-    @ColumnInfo(name = "nama_review")
-    private String nama_review;
+    @ColumnInfo(name = "movie_name")
+    private String movie_name;
 
-    @ColumnInfo(name = "umur")
-    private String umur;
+    @ColumnInfo(name = "rating_score")
+    private String rating_score;
 
-    @ColumnInfo(name = "jenis_kelamin")
-    private String jenis_kelamin;
+    @ColumnInfo(name = "recommended")
+    private String recommended;
 
-    @ColumnInfo(name = "asal")
-    private String asal;
-
-    @ColumnInfo(name = "email")
-    private String email;
+    @ColumnInfo(name = "comment")
+    private String comment;
 
     public int getId_review() {
         return id_review;
@@ -48,43 +45,35 @@ public class Reviews {
         this.id_category_review = id_category_review;
     }
 
-    public String getNama_review() {
-        return nama_review;
+    public String getMovie_name() {
+        return movie_name;
     }
 
-    public void setNama_review(String nama_review) {
-        this.nama_review = nama_review;
+    public void setMovie_name(String movie_name) {
+        this.movie_name = movie_name;
     }
 
-    public String getUmur() {
-        return umur;
+    public String getRating_score() {
+        return rating_score;
     }
 
-    public void setUmur(String umur) {
-        this.umur = umur;
+    public void setRating_score(String rating_score) {
+        this.rating_score = rating_score;
     }
 
-    public String getJenis_kelamin() {
-        return jenis_kelamin;
+    public String getRecommended() {
+        return recommended;
     }
 
-    public void setJenis_kelamin(String jenis_kelamin) {
-        this.jenis_kelamin = jenis_kelamin;
+    public void setRecommended(String recommended) {
+        this.recommended = recommended;
     }
 
-    public String getAsal() {
-        return asal;
+    public String getComment() {
+        return comment;
     }
 
-    public void setAsal(String asal) {
-        this.asal = asal;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 }

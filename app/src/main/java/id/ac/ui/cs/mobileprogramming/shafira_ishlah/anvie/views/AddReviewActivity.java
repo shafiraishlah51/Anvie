@@ -24,26 +24,24 @@ import butterknife.OnClick;
 
 public class AddReviewActivity extends AppCompatActivity {
 
-    @BindView(R.id.edtNamaReview)
-    EditText edtNamaReview;
-    @BindView(R.id.edtUmur)
-    EditText edtUmur;
-    @BindView(R.id.radio_laki)
-    RadioButton radioLaki;
-    @BindView(R.id.radio_perempuan)
-    RadioButton radioPerempuan;
-    @BindView(R.id.edtAsal)
-    EditText edtAsal;
-    @BindView(R.id.edtEmail)
-    EditText edtEmail;
+    @BindView(R.id.edtMovieName)
+    EditText edtMovieName;
+    @BindView(R.id.edtRatingScore)
+    EditText edtRatingScore;
+    @BindView(R.id.radio_recommended)
+    RadioButton radioRecommended;
+    @BindView(R.id.radio_not_recommended)
+    RadioButton radioNotRecommended;
+    @BindView(R.id.edtComment)
+    EditText edtComment;
     @BindView(R.id.btnSave)
     Button btnSave;
-    @BindView(R.id.radio_jenis_kelamin)
-    RadioGroup radioJenisKelaminGroup;
+    @BindView(R.id.radio_recommended_group)
+    RadioGroup radioRecommendedGroup;
 
     ReviewRepo reviewRepo;
     int id_category_review;
-    String namaReview, asal, umur, jenis_kelamin, email;
+    String movieName, comment, ratingScore, recommended;
     boolean empty;
 
     @Override
@@ -53,7 +51,7 @@ public class AddReviewActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         Toolbar tbDetailDokter = findViewById(R.id.toolbar);
-        tbDetailDokter.setTitle("Add Review");
+        tbDetailDokter.setTitle("Add Movie Review");
         setSupportActionBar(tbDetailDokter);
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -79,11 +77,10 @@ public class AddReviewActivity extends AppCompatActivity {
     }
 
     private void clearData() {
-        edtNamaReview.setText("");
-        edtUmur.setText("");
-        edtAsal.setText("");
-        edtEmail.setText("");
-        radioJenisKelaminGroup.clearCheck();
+        edtMovieName.setText("");
+        edtRatingScore.setText("");
+        edtComment.setText("");
+        radioRecommendedGroup.clearCheck();
     }
 
     private void saveData() {
@@ -93,33 +90,30 @@ public class AddReviewActivity extends AppCompatActivity {
 
         // kita masukkan data ke dalam siswaModel
         reviews.setId_category_review(id_category_review);
-        reviews.setNama_review(namaReview);
-        reviews.setAsal(asal);
-        reviews.setUmur(umur);
-        reviews.setJenis_kelamin(jenis_kelamin);
-        reviews.setEmail(email);
+        reviews.setMovie_name(movieName);
+        reviews.setComment(comment);
+        reviews.setRating_score(ratingScore);
+        reviews.setRecommended(recommended);
 
         // Kita lakukan operasi insert
         reviewRepo.daoClass().insertReview(reviews);
     }
 
     private void cekData() {
-        namaReview = edtNamaReview.getText().toString();
-        asal = edtAsal.getText().toString();
-        umur = edtUmur.getText().toString();
-        email = edtEmail.getText().toString();
-
-        empty = namaReview.isEmpty() || asal.isEmpty() || umur.isEmpty() || email.isEmpty() || jenis_kelamin.isEmpty();
+        movieName = edtMovieName.getText().toString();
+        comment = edtComment.getText().toString();
+        ratingScore = edtRatingScore.getText().toString();
+        empty = movieName.isEmpty() || comment.isEmpty() || ratingScore.isEmpty() || recommended.isEmpty();
     }
 
-    @OnClick({R.id.radio_laki, R.id.radio_perempuan})
+    @OnClick({R.id.radio_recommended, R.id.radio_not_recommended})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.radio_laki:
-                jenis_kelamin = radioLaki.getText().toString();
+            case R.id.radio_recommended:
+                recommended = radioRecommended.getText().toString();
                 break;
-            case R.id.radio_perempuan:
-                jenis_kelamin = radioPerempuan.getText().toString();
+            case R.id.radio_not_recommended:
+                recommended = radioNotRecommended.getText().toString();
                 break;
         }
     }

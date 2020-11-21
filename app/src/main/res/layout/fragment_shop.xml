@@ -6,18 +6,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".views.ShopFragment">
 
+
     <Button
         android:id="@+id/reviewButton"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="30dp"
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="@string/categoryReview"
-        />
-
+        android:layout_gravity="center_horizontal"
+        android:width="350dp"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:text="@string/review" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/shopRecyclerView"

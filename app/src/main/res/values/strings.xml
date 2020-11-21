@@ -24,8 +24,16 @@
     <string name="order">Order</string>
     <string name="my_movie">My Movie</string>
     <string name="thanks_for_your_order">Thanks for your order.</string>
-    <string name="categoryReview">Review</string>
+    <string name="review">Review</string>
     <string name="add_review">Add Review</string>
     <string name="play">Play</string>
     <string name="see_trailer">See Trailer</string>
+    <string name="movie_name">Movie Name</string>
+    <string name="ratingscore">RatingScore</string>
+    <string name="recommended_movie">Recommended movie :</string>
+    <string name="recommended">Recommended</string>
+    <string name="not_recommended">Not Recommended</string>
+    <string name="comment">Comment</string>
+    <string name="save">Save</string>
+    <string name="movie_category">Movie Category</string>
 </resources>

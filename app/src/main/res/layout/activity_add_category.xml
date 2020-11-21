@@ -29,27 +29,41 @@
         android:padding="0dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Movie Category Review"
+            android:textSize="24dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/colorPrimary">
+
+        </TextView>
+
         <EditText
             android:id="@+id/edtCategoryName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
-            android:hint="Category Name" />
+            android:hint="@string/movie_category" />
 
         <EditText
             android:id="@+id/edtDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
-            android:hint="Description" />
+            android:hint="@string/description" />
 
         <Button
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:layout_margin="30dp"
             android:background="@color/colorPrimary"
-            android:text="Save"
+            android:text="@string/save"
             android:textColor="@android:color/white" />
 
     </LinearLayout>
