@@ -14,8 +14,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.R;
-import id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.adapters.ShopListAdapter;
 import id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.databinding.FragmentProductDetailBinding;
 import id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.viewmodels.ShopViewModel;
 
@@ -46,6 +44,13 @@ public class ProductDetailFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(ProductDetailFragment.this.getActivity(), SeeTrailerActivity.class));
+            }
+        });
+
+        fragmentProductDetailBinding.seeRingtoneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ProductDetailFragment.this.getActivity(), SeeRingtoneActivity.class));
             }
         });
     }

@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <receiver
             android:name="id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.views.MyReceiver"
             android:enabled="true"
@@ -44,10 +45,14 @@
             android:name=".views.UpdateCategoryReviewActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
+            android:name=".views.SeeRingtoneActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
             android:name=".views.ListReviewActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".views.AddReviewActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <service android:name=".views.MyService" />
     </application>
 
 </manifest>

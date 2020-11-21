@@ -30,4 +30,13 @@
     <string name="comment">Komentar</string>
     <string name="save">Simpan</string>
     <string name="movie_category">Kategori Film</string>
+    <string name="add_category_review">Tambahkan ategori penilaian</string>
+    <string name="create_movie_category_review">Membuat Penilaian Kategori Film</string>
+    <string name="edit">Ubah</string>
+    <string name="delete">Hapus</string>
+    <string name="start">mulai</string>
+    <string name="reset">ulang</string>
+    <string name="see_ringtone">Lihat Ringtone</string>
+    <string name="start_service">Mulai Layanan</string>
+    <string name="stop_service">Berhenti Layanan</string>
 </resources>

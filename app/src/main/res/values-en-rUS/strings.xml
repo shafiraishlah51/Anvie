@@ -30,4 +30,13 @@
     <string name="comment">Comment</string>
     <string name="save">Save</string>
     <string name="movie_category">Movie Category</string>
+    <string name="add_category_review">Add Category Review</string>
+    <string name="create_movie_category_review">Create Movie Category Review</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="start">start</string>
+    <string name="reset">reset</string>
+    <string name="see_ringtone">See Ringtone</string>
+    <string name="start_service">Start Service</string>
+    <string name="stop_service">Stop Service</string>
 </resources>

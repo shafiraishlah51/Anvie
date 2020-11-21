@@ -8,12 +8,13 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
+import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
@@ -22,8 +23,7 @@ import id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.R;
 import id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.models.CartItem;
 import id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.viewmodels.ShopViewModel;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity{
 
     private static final String TAG = "MainActivity";
     NavController navController;
@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 
     @Override
     public boolean onSupportNavigateUp() {
@@ -92,5 +91,6 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         return NavigationUI.onNavDestinationSelected(item, navController) || super.onOptionsItemSelected(item);
     }
+
 
 }

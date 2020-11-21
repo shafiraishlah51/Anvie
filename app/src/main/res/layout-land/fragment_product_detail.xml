@@ -20,7 +20,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:padding="16dp">
 
             <ImageView
@@ -28,14 +28,15 @@
                 android:layout_width="300dp"
                 android:layout_height="300dp"
                 android:layout_gravity="center"
-                android:scaleType="fitCenter"
-                android:src="@drawable/aladdin"
                 android:productImage="@{shopViewModel.product.imageUrl}"
-                />
+                android:scaleType="fitCenter"
+                android:src="@drawable/aladdin" />
 
-            <Space
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="16dp" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
             <TextView
                 android:id="@+id/productNameTextView"
@@ -44,9 +45,6 @@
                 android:text="@{shopViewModel.product.name}"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="4dp" />
 
             <TextView
                 android:id="@+id/priceTextView"
@@ -55,9 +53,7 @@
                 android:text="@{String.valueOf(shopViewModel.product.price) + `$` }"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="4dp" />
+
 
             <TextView
                 android:id="@+id/availableTextView"
@@ -67,9 +63,6 @@
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
                 android:textColor="@{shopViewModel.product.available ? @color/colorPrimary : @color/red}" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="8dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -84,27 +77,11 @@
                 android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="4dp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/seeRingtoneButton"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/see_ringtone"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
-                    />
-
-                <Space
-                    android:layout_width="10dp"
-                    android:layout_height="wrap_content" />
 
                 <Button
                     android:id="@+id/seeTrailerButton"
@@ -114,10 +91,6 @@
                     android:text="@string/see_trailer"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
                     />
-
-             <Space
-                 android:layout_width="10dp"
-                 android:layout_height="wrap_content" />
 
             <Button
                 android:id="@+id/addToCartButton"
@@ -130,6 +103,7 @@
                 android:onClick="@{() -> shopViewModel.addItemToCart(shopViewModel.product)}"
                 />
 
+            </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
