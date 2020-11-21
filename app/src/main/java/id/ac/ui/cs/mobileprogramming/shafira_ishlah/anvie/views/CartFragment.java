@@ -60,7 +60,7 @@ public class CartFragment extends Fragment implements CartListAdapter.CartInterf
             }
         });
 
-        shopViewModel.getTotalPrice().observe(getViewLifecycleOwner(), new Observer<Double>() {
+        shopViewModel.getTotalPrice().observe(getViewLifecycleOwner(),  new Observer<Double>() {
             @Override
             public void onChanged(Double aDouble) {
                 fragmentCartBinding.orderTotalTextView.setText("Total: $ " + aDouble.toString());
@@ -70,6 +70,7 @@ public class CartFragment extends Fragment implements CartListAdapter.CartInterf
         fragmentCartBinding.placeOrderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                shopViewModel.resetCart();
                 navController.navigate(R.id.action_cartFragment_to_orderFragment);
             }
         });

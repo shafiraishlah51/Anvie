@@ -20,9 +20,7 @@
         <action
             android:id="@+id/action_shopFragment_to_cartFragment"
             app:destination="@id/cartFragment" />
-        <action
-            android:id="@+id/action_shopFragment_to_reviewFragment"
-            app:destination="@id/ReviewFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/productDetailFragment"
@@ -54,12 +52,6 @@
             app:destination="@id/shopFragment" />
     </fragment>
 
-    <fragment
-        android:id="@+id/ReviewFragment"
-        android:name="id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.views.ReviewFragment"
-        android:label="Review"
-        tools:layout="@layout/fragment_review" >
-    </fragment>
 
 
 

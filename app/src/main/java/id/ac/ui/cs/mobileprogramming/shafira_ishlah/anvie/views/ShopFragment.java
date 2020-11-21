@@ -18,10 +18,8 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.DividerItemDecoration;
 
-import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,11 +69,12 @@ public class ShopFragment extends Fragment implements ShopListAdapter.ShopInterf
         });
         navController = Navigation.findNavController(view);
         fragmentShopBinding.reviewButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                navController.navigate(R.id.action_shopFragment_to_reviewFragment);
-            }
+           @Override
+           public void onClick(View view) {
+               startActivity(new Intent(ShopFragment.this.getActivity(), CategoryReviewActivity.class));
+           }
         });
+
     }
 
     @Override
