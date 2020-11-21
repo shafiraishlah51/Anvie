@@ -39,4 +39,7 @@
     <string name="see_ringtone">Lihat Ringtone</string>
     <string name="start_service">Mulai Layanan</string>
     <string name="stop_service">Berhenti Layanan</string>
+    <string name="start_ringtone">Mulai Ringtone</string>
+    <string name="stop_ringtone">Berhenti Ringtone</string>
+    <string name="let_s_try_the_ringtone">Mari coba ringtonenya!</string>
 </resources>

@@ -45,4 +45,7 @@
     <string name="see_ringtone">See Ringtone</string>
     <string name="start_service">Start Service</string>
     <string name="stop_service">Stop Service</string>
+    <string name="start_ringtone">Start Ringtone</string>
+    <string name="stop_ringtone">Stop Ringtone</string>
+    <string name="let_s_try_the_ringtone">Let\'s try the ringtone!</string>
 </resources>
