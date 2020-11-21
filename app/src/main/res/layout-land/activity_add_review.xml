@@ -20,6 +20,18 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_the_review"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary">
+    </TextView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,91 +40,90 @@
         android:padding="30dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="30dp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <EditText
-            android:id="@+id/edtMovieName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp"
-            android:hint="@string/movie_name" />
-
-        <EditText
-            android:id="@+id/edtRatingScore"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp"
-            android:hint="@string/ratingscore"
-            android:inputType="number" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/recommended_movie" />
-
-        <RadioGroup
-            android:id="@+id/radio_recommended_group"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
-
-            <RadioButton
-                android:id="@+id/radio_recommended"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/recommended" />
-
-            <RadioButton
-                android:id="@+id/radio_not_recommended"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/not_recommended" />
-
-        </RadioGroup>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="30dp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-        <EditText
-            android:id="@+id/edtComment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:hint="@string/comment"
-            android:lines="2"
-            android:maxLines="5" />
-
-        <Space
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="50dp">
-
-        </Space>
-
-        <Button
-            android:id="@+id/btnSave"
-            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:text="@string/save"
-            android:textColor="@android:color/white" />
+            android:orientation="vertical"
+            android:padding="30dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <EditText
+                android:id="@+id/edtMovieName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:hint="@string/movie_name" />
+
+            <EditText
+                android:id="@+id/edtRatingScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:hint="@string/ratingscore"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/recommended_movie" />
+
+            <RadioGroup
+                android:id="@+id/radio_recommended_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="25dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radio_recommended"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/recommended" />
+
+                <RadioButton
+                    android:id="@+id/radio_not_recommended"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/not_recommended" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="30dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <EditText
+                android:id="@+id/edtComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:hint="@string/comment"
+                android:lines="2"
+                android:maxLines="5" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="50dp">
+
+            </Space>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:textColor="@android:color/white" />
 
 
-    </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -28,6 +28,17 @@
         android:padding="30dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_the_review"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20dp"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary">
+        </TextView>
+
         <EditText
             android:id="@+id/edtMovieName"
             android:layout_width="match_parent"
