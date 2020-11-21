@@ -20,4 +20,6 @@
     <string name="thanks_for_your_order">Thanks for your order.</string>
     <string name="categoryReview">Review</string>
     <string name="add_review">Add Review</string>
+    <string name="play">Play</string>
+    <string name="see_trailer">See Trailer</string>
 </resources>

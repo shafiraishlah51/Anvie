@@ -30,6 +30,9 @@
         <action
             android:id="@+id/action_productDetailFragment_to_cartFragment"
             app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_productDetailFragment_to_seeTrailerFragment"
+            app:destination="@id/seeTrailerFragment" />
     </fragment>
     <fragment
         android:id="@+id/cartFragment"
@@ -52,7 +55,10 @@
             app:destination="@id/shopFragment" />
     </fragment>
 
-
-
-
+    <fragment
+        android:id="@+id/seeTrailerFragment"
+        android:name="id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.views.SeeTrailerFragment"
+        android:label="@string/see_trailer"
+        tools:layout="@layout/fragment_see_trailer" >
+    </fragment>
 </navigation>

@@ -88,9 +88,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="4dp" />
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/seeTrailerButton"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/see_trailer"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                    />
+
+             <Space
+                 android:layout_width="10dp"
+                 android:layout_height="wrap_content" />
+
             <Button
                 android:id="@+id/addToCartButton"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                style="@style/Widget.MaterialComponents.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:enabled="@{shopViewModel.product.available}"
@@ -98,8 +116,9 @@
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
                 android:onClick="@{() -> shopViewModel.addItemToCart(shopViewModel.product)}"
                 />
+
+            </LinearLayout>
         </LinearLayout>
 
     </ScrollView>
 </layout>
-

@@ -48,6 +48,9 @@ public class UpdateCategoryReviewActivity extends AppCompatActivity {
         // Menangkap data dari activity sebelumnya
         bundle = getIntent().getExtras();
 
+        // Buat object database
+        reviewRepo = ReviewRepo.createDatabase(this);
+
         // Menampilkan data sebelumnya ke layar
         showData();
     }
