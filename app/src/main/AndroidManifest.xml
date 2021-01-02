@@ -55,6 +55,12 @@
         <activity android:name=".views.AddReviewActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <service android:name=".views.MyService" />
+        <activity android:name=".NotificationView"
+            android:parentActivityName=".views.SeeTrailerActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.SeeTrailerActivity"/>
+        </activity>
     </application>
 
 </manifest>
