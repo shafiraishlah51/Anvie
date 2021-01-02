@@ -6,11 +6,20 @@ import id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.models.CategoryReview;
 
 import id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.repositories.ReviewRepo;
 
+import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,6 +32,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class CategoryReviewActivity extends AppCompatActivity {
+
+    private int STORAGE_PERMISSION_CODE = 1;
 
     @BindView(R.id.rvCategoryReview)
     RecyclerView rvCategoryReview;
@@ -46,7 +57,18 @@ public class CategoryReviewActivity extends AppCompatActivity {
         categoryReviewList = new ArrayList<>();
 
         ExtendedFloatingActionButton fab = findViewById(R.id.fabAdd);
-        fab.setOnClickListener(view -> startActivity(new Intent(CategoryReviewActivity.this, AddCategoryReviewActivity.class)));
+        fab.setOnClickListener(new  View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (ContextCompat.checkSelfPermission(CategoryReviewActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+                    startActivity(new Intent(CategoryReviewActivity.this, AddCategoryReviewActivity.class));
+                    Toast.makeText(CategoryReviewActivity.this, "You have already granted this permission!",
+                            Toast.LENGTH_SHORT).show();
+                } else {
+                    requestStoragePermission();
+                }
+            }
+        });
     }
 
     @Override
@@ -63,11 +85,46 @@ public class CategoryReviewActivity extends AppCompatActivity {
         rvCategoryReview.setAdapter(new CategoryReviewAdapter(this, categoryReviewList));
     }
 
-        private void getData() {
+    private void getData() {
+        // Operasi mengambil data dari database Sqlite
+        categoryReviewList = reviewRepo.daoClass().select();
+    }
 
-            // Operasi mengambil data dari database Sqlite
-            categoryReviewList = reviewRepo.daoClass().select();
+    private void requestStoragePermission() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                Manifest.permission.READ_EXTERNAL_STORAGE)) {
+            new AlertDialog.Builder(this)
+                    .setTitle("Permission needed")
+                    .setMessage("This permission is needed because we need to use your external storage")
+                    .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            ActivityCompat.requestPermissions(CategoryReviewActivity.this,
+                                    new String[] {Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
+                        }
+                    })
+                    .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    })
+                    .create().show();
+        } else {
+            ActivityCompat.requestPermissions(this,
+                    new String[] {Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
         }
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (requestCode == STORAGE_PERMISSION_CODE)  {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "Permission GRANTED", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Permission DENIED", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
 
 
 
