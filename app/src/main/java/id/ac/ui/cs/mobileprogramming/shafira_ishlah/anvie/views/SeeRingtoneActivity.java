@@ -13,7 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
+import android.opengl.GLSurfaceView;
 import id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.R;
 
 public class SeeRingtoneActivity extends Activity implements View.OnClickListener {
@@ -21,6 +21,7 @@ public class SeeRingtoneActivity extends Activity implements View.OnClickListene
     //button objects
     private Button buttonStart;
     private Button buttonStop;
+    private MusicView musicView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,8 @@ public class SeeRingtoneActivity extends Activity implements View.OnClickListene
         //attaching onclicklistener to buttons
         buttonStart.setOnClickListener(this);
         buttonStop.setOnClickListener(this);
+
+        musicView =(MusicView) findViewById(R.id.musicView);
 
     }
 
@@ -64,6 +67,18 @@ public class SeeRingtoneActivity extends Activity implements View.OnClickListene
             Log.e("Connectivity Exception", e.getMessage());
         }
         return connected;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        musicView.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        musicView.onPause();
     }
 }
 

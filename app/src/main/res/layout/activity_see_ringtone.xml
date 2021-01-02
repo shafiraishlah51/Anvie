@@ -22,17 +22,23 @@
             android:text="@string/let_s_try_the_ringtone"
             android:layout_gravity="center_horizontal"
             android:textSize="30dp"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="30dp"
             android:textStyle="bold"
             android:textColor="@color/colorPrimary">
         </TextView>
+
+        <id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.views.MusicView
+            android:id="@+id/musicView"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="30dp"
+            android:layout_height="200dp" />
 
         <Button
             android:id="@+id/buttonStart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             style="@style/Widget.MaterialComponents.Button"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
             android:layout_weight="1"
@@ -47,6 +53,8 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
             android:layout_weight="1"
             android:text="@string/stop_ringtone" />
+
+
 
     </LinearLayout>
 
