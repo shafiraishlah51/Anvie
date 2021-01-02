@@ -112,6 +112,12 @@ public class SeeRingtoneActivity extends Activity implements View.OnClickListene
         openGLView.onPause();
     }
 
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
+    }
+
     public void initListeners()
     {
         mSensorManager.registerListener((SensorEventListener) this, accelerometer, SensorManager.SENSOR_DELAY_FASTEST);
@@ -158,9 +164,5 @@ public class SeeRingtoneActivity extends Activity implements View.OnClickListene
 
     }
 
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-
-    }
 }
 
