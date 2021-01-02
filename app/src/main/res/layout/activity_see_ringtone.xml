@@ -31,7 +31,29 @@
             android:id="@+id/musicView"
             android:layout_width="match_parent"
             android:layout_marginBottom="30dp"
-            android:layout_height="200dp" />
+            android:layout_height="100dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tilt your phone to see the movement"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorPrimary">
+        </TextView>
+
+        <id.ac.ui.cs.mobileprogramming.shafira_ishlah.anvie.views.OpenGLView
+            android:id="@+id/openGLView"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_height="100dp" />
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/accText"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp" />
 
         <Button
             android:id="@+id/buttonStart"
