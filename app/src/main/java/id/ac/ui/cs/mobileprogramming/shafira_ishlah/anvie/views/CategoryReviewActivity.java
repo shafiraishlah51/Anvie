@@ -24,6 +24,8 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +43,15 @@ public class CategoryReviewActivity extends AppCompatActivity {
     private ReviewRepo reviewRepo;
     private List<CategoryReview> categoryReviewList;
 
+    static {
+        System.loadLibrary("native-lib");
+    }
+
+    /**
+     * A native method that is implemented by the 'native-lib' native library,
+     * which is packaged with this application.
+     */
+    public native int Jniint();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +67,17 @@ public class CategoryReviewActivity extends AppCompatActivity {
         // Membuat object List
         categoryReviewList = new ArrayList<>();
 
+        //Implementasi JNI
+        ExtendedFloatingActionButton fabnum = findViewById(R.id.fab);
+        fabnum.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Our magic JNI number is :" + Jniint() + " !", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
+        //Implementasi perizinan external storage
         ExtendedFloatingActionButton fab = findViewById(R.id.fabAdd);
         fab.setOnClickListener(new  View.OnClickListener() {
             @Override
