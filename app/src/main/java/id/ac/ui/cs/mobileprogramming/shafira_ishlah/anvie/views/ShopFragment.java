@@ -46,7 +46,6 @@ public class ShopFragment extends Fragment implements ShopListAdapter.ShopInterf
         // Inflate the layout for this fragment
         fragmentShopBinding= FragmentShopBinding.inflate(inflater,container,false);
         return fragmentShopBinding.getRoot();
-
     }
 
     @Override
